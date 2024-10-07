@@ -35,7 +35,11 @@ class ScaffoldExample extends StatelessWidget {
         },
         child: Icon(Icons.add),
         backgroundColor: Colors.blue,
+<<<<<<< HEAD
 	//i am making some changes soon
+=======
+
+>>>>>>> dev-james
       ),
     );
   }
