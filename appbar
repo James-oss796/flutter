@@ -1,0 +1,57 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'AppBar Example',
+      home: AppBarExample(),
+    );
+  }
+}
+
+class AppBarExample extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('AppBar Example'),
+        backgroundColor: Colors.blue, // Set a custom background color
+        centerTitle: true, // Center the title
+        leading: IconButton(
+          icon: Icon(Icons.menu), // Add a leading icon (hamburger menu)
+          onPressed: () {
+            // Action when menu icon is pressed
+            print('Menu button pressed');
+          },
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.search), // Add a search button on the right
+            onPressed: () {
+              // Action when search icon is pressed
+              print('Search button pressed');
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.more_vert), // Add an additional icon (more options)
+            onPressed: () {
+              // Action when the more options button is pressed
+              print('More options button pressed');
+            },
+          ),
+        ],
+      ),
+      body: Center(
+        child: Text(
+          'Hello, AppBar!',
+          style: TextStyle(fontSize: 24),
+        ),
+      ),
+    );
+  }
+
